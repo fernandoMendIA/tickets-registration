@@ -1,0 +1,52 @@
+### endpoint 1. traer todos los registros de multas
+GET http://localhost:8000/tickets
+
+### endpoint 2. crear una multa
+POST http://localhost:8000/tickets
+Content-Type: application/json
+
+{
+  "name": "fernando mendoza",
+
+  "plate": "ABC123",
+  "type_vehicle": "Car",
+  "image": "car.jpg",
+  "color": "Red",
+  "model": "Sedan",
+  "car_brand": "Toyota",
+  "speed": 60
+  }
+
+### endpoint 3. Editar un registro de multa
+PUT  http://localhost:8000/tickets/663d3be733ce7c616556b2f2
+Content-Type: application/json
+
+{
+  "color": "verdoso"
+}
+
+### endpoint 4. eliminar una multa (corrupci[on?])
+DELETE http://localhost:8000/tickets/663d3be733ce7c616556b2f2
+
+### endpoint 5. traer un elemento por id
+GET  http://localhost:8000/tickets/663d3e8da7df35938108f31e
+
+
+### endpoint 6. multas por un rango de fecha
+GET  http://localhost:8000/tickets/by_date/2023-05-01/2023-05-10
+
+### endpoint 7. todos los nombres con mas multas que "numero"
+GET  http://localhost:8000/tickets/repeat_speeders/2
+
+### endpoint 8. borrar todas las multas de "name" "%20" para espacios
+DELETE  http://localhost:8000/tickets/delete_infractor/fernando%20mendoza
+
+### endpoint 9. borrar las multas con menor a "speed" borrar > speed
+DELETE  http://localhost:8000/tickets/delete_speedmin/60
+
+### endpoint 10. borrar las multas con menor a "speed" borrar > speed
+GET http://localhost:8000/tickets/
+
+### endpoint 10. filtros juntos name, plate, color, type_vehicle "%20" para espacios
+GET http://localhost:8000/tickets?name=juan%20perez&plate=888aaa&color=Red&type=vagoneta
+
