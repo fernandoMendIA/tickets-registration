@@ -35,10 +35,10 @@ export class Ticket {
   // get all and find by filters///////////
   static async findByFilters(filters) {
     try {
-      const filteredTickets = await TicketModel.find(filters);
-      return filteredTickets;
+        const filteredTickets = await TicketModel.find(filters);
+        return filteredTickets;
     } catch (error) {
-      throw new Error('Error al recuperar los datos o filtrarlos', error);
+        throw new Error('Error al recuperar los datos o filtrarlos', error);
     }
   }
 
