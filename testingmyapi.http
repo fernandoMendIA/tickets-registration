@@ -6,19 +6,19 @@ POST http://localhost:8000/tickets
 Content-Type: application/json
 
 {
-  "name": "fernando mendoza",
+  "name": "Juan perez",
 
-  "plate": "ABC123",
-  "type_vehicle": "Car",
+  "plate": "888aaa",
+  "type_vehicle": "vagoneta",
   "image": "car.jpg",
   "color": "Red",
   "model": "Sedan",
   "car_brand": "Toyota",
-  "speed": 60
+  "speed": 20
   }
 
 ### endpoint 3. Editar un registro de multa
-PUT  http://localhost:8000/tickets/663d3be733ce7c616556b2f2
+PUT  http://localhost:8000/tickets/664155027eae700e9de69689
 Content-Type: application/json
 
 {
@@ -26,26 +26,26 @@ Content-Type: application/json
 }
 
 ### endpoint 4. eliminar una multa (corrupci[on?])
-DELETE http://localhost:8000/tickets/663d3be733ce7c616556b2f2
+DELETE http://localhost:8000/tickets/664155027eae700e9de69689
 
 ### endpoint 5. traer un elemento por id
-GET  http://localhost:8000/tickets/663d3e8da7df35938108f31e
+GET  http://localhost:8000/tickets/664154d57eae700e9de69681
 
 // requiest construidas
 
 
 ### endpoint 1. multas por un rango de fecha
-GET  http://localhost:8000/tickets/by_date/2023-05-01/2023-05-10
+GET  http://localhost:8000/tickets/by_date/2022-05-01/2024-05-10
 
-### endpoint 2. todos los nombres con mas multas que "numero"
-GET  http://localhost:8000/tickets/repeat_speeders/2
+### endpoint 2. todos los nombres con numero de multas mayor que > "numero" 
+GET  http://localhost:8000/tickets/repeat_speeders/1
 
-### endpoint 3. borrar todas las multas de "name" "%20" para espacios
+### endpoint 3. borrar todas las multas de "name" {"%20" para espacios}
 DELETE  http://localhost:8000/tickets/delete_infractor/fernando%20mendoza
 
-### endpoint 4. borrar las multas con menor a "speed" borrar > speed
+### endpoint 4. borrar las multas con menor a "speed" borrar < speed
 DELETE  http://localhost:8000/tickets/delete_speedmin/60
 
-### endpoint 5. filtros juntos name, plate, color, type_vehicle "%20" para espacios
+### endpoint 5. filtros juntos name, plate, color, type_vehicle {"%20" para espacios}
 GET http://localhost:8000/tickets?name=juan%20perez&plate=888aaa&color=Red&type=vagoneta
 
