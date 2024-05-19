@@ -1,0 +1,39 @@
+### endpoint 1. traer todos los registros de vehicle
+GET http://localhost:8000/vehicles
+
+### endpoint 2. crear una vehicle
+POST http://localhost:8000/vehicles
+Content-Type: application/json
+
+{
+  "ouner": "Juan perez",
+
+  "plate": "345GHS",
+  "type_vehicle": "vagoneta",
+  "image": "imagen.jpg",
+  "color": "Red",
+  "model": "Sedan-25",
+  "car_brand": "Toyota",
+  "year": 2020,
+  "ruat": "AFA12"
+}
+
+### endpoint 3. Editar un vehiculo_ruat
+PUT  http://localhost:8000/vehicles/66496ca5c0a0fbbe9eadcc5e
+Content-Type: application/json
+
+{
+  "color": "avenger"
+}
+
+### endpoint 4. eliminar una multa (corrupci[on?])
+DELETE http://localhost:8000/vehicles/66496ca5c0a0fbbe9eadcc5e
+
+### reporte 1
+GET http://localhost:8000/vehicles/multasporvehiculo/66497407366789313c8cc0d5
+
+
+
+### reporte 2
+GET http://localhost:8000/vehicles/detallemultasporvehiculo
+

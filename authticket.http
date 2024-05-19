@@ -1,0 +1,57 @@
+### registrando usuario
+POST http://localhost:8000/auth/registro
+Content-Type: application/json
+
+{
+    "nombreusuario": "fer",
+    "correo" : "fergmail.com",
+    "contrasenia" : "123456"
+}
+
+### iniciar sesion
+POST http://localhost:8000/auth/iniciarsesion
+Content-Type: application/json
+
+{
+  "correo" : "fergmail.com",
+  "contrasenia" : "123456"
+}
+
+### get todas las multas
+GET http://localhost:8000/tickets
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2NjQ5NmI1NDFkNDJkODkzZWU1ZDE5M2MiLCJpYXQiOjE3MTYwODc2NDMsImV4cCI6MTcxNjA5ODQ0M30.xtY5iQ7rmlKR2qPwqtROf4D3Sky6BV2FOxyOBhhHCyw
+
+### crear multa
+POST http://localhost:8000/tickets
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2NjQ5NmI1NDFkNDJkODkzZWU1ZDE5M2MiLCJpYXQiOjE3MTYwOTk2NzMsImV4cCI6MTcxNjExMDQ3M30.2LgNakeJvyihhvaFvcm4Dd9qFrEG6EtNwxslfF8FpqE
+
+{
+  "plate": "888aaa",
+  "type_vehicle": "vagoneta",
+  "image": "car.jpg",
+  "speed": 60,
+  "vehicle_ruat": "66496ca5c0a0fbbe9eadcc5e"
+}
+
+### endpoint 3. Editar un registro de multa
+PUT  http://localhost:8000/tickets/66496e48c0a0fbbe9eadcc6b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2NjQ5NmI1NDFkNDJkODkzZWU1ZDE5M2MiLCJpYXQiOjE3MTYwODc2NDMsImV4cCI6MTcxNjA5ODQ0M30.xtY5iQ7rmlKR2qPwqtROf4D3Sky6BV2FOxyOBhhHCyw
+
+{
+  "type_vehicle": "camion"
+}
+
+### endpoint 4. eliminar una multa)
+DELETE http://localhost:8000/tickets/66496e48c0a0fbbe9eadcc6b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2NjQ5NmI1NDFkNDJkODkzZWU1ZDE5M2MiLCJpYXQiOjE3MTYwODc2NDMsImV4cCI6MTcxNjA5ODQ0M30.xtY5iQ7rmlKR2qPwqtROf4D3Sky6BV2FOxyOBhhHCyw
+
+
+
+### cerrar sesionnn
+POST http://localhost:8000/auth/cerrarsesion
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2NjQ5NmI1NDFkNDJkODkzZWU1ZDE5M2MiLCJpYXQiOjE3MTYwODc2NDMsImV4cCI6MTcxNjA5ODQ0M30.xtY5iQ7rmlKR2qPwqtROf4D3Sky6BV2FOxyOBhhHCyw

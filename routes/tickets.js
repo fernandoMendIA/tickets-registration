@@ -1,8 +1,10 @@
 import { Router } from 'express'
 
-import { TicketController } from '../controllers/tickets.js'
+import { TicketController } from '../controllers/Tickets.js'
 
 export const ticketsRouter = Router()
+
+
 
 //crud create read update delete
 ticketsRouter.get('/', TicketController.getAll) //endpoint 1. Read and filters

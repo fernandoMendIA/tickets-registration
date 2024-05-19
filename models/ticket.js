@@ -10,10 +10,6 @@ mongoose.connect(MONGO_URI)
 
 // Definición del esquema de tickets
 const ticketSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, 'Firstname is required.'],
-  },
   date: {
     type: Date,
     default: Date.now
@@ -21,15 +17,13 @@ const ticketSchema = new mongoose.Schema({
   plate: String,
   type_vehicle: String,
   image: String,
-  color: String,
-  model: String,
-  car_brand: String,
-  speed: Number
+  speed: Number,
+  vehicle_ruat: { type: mongoose.Schema.Types.ObjectId, ref: 'vehicle' }
 });
 
 
 // Modelo de la colección tickets
-const TicketModel = mongoose.model('Ticket', ticketSchema, 'tickets');
+export const TicketModel = mongoose.model('Ticket', ticketSchema, 'tickets');
 
 export class Ticket {
   // get all and find by filters///////////
@@ -59,7 +53,6 @@ export class Ticket {
       return ticket;
     } catch (error) {
       console.error('Error al crear el ticket:', error);
-
     }
   }
 

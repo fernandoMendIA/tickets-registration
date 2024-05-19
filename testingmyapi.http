@@ -15,7 +15,7 @@ Content-Type: application/json
   "model": "Sedan",
   "car_brand": "Toyota",
   "speed": 20
-  }
+}
 
 ### endpoint 3. Editar un registro de multa
 PUT  http://localhost:8000/tickets/664155027eae700e9de69689
@@ -49,3 +49,5 @@ DELETE  http://localhost:8000/tickets/delete_speedmin/60
 ### endpoint 5. filtros juntos name, plate, color, type_vehicle {"%20" para espacios}
 GET http://localhost:8000/tickets?name=juan%20perez&plate=888aaa&color=Red&type=vagoneta
 
+### create new get point
+GET http://localhost:8000/tickets

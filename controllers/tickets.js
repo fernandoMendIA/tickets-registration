@@ -8,7 +8,6 @@ export class TicketController {
     if (plate) filters.plate = { $regex: new RegExp(plate, "i") };
     if (color) filters.color = { $regex: new RegExp(color, "i") };
     if (type) filters.type_vehicle = { $regex: new RegExp(type, "i") };
-    console.log(filters)
     
     const filteredTickets = await Ticket.findByFilters(filters);
     if (filteredTickets) {
@@ -51,9 +50,9 @@ export class TicketController {
 
   static async delete (req, res) {
     const { id } = req.params
-    console.log(id)
+
     const result = await Ticket.delete(id)
-    console.log(result)
+
     if (!result) {
       return res.status(404).json({ message: 'Ticket not found' })
     }else{
