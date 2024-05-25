@@ -1,0 +1,246 @@
+[{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0706"
+  },
+  "plate": "345DFS",
+  "type_vehicle": "vagoneta",
+  "image": "car.jpg",
+  "speed": 60,
+  "vehicle_ruat": {
+    "$oid": "66513890f1ceb26f247a0723"
+  }
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0707"
+  },
+  "plate": "838FDE",
+  "type_vehicle": "vagoneta",
+  "image": "car.jpg",
+  "speed": 65,
+  "vehicle_ruat": {
+    "$oid": "66513890f1ceb26f247a0723"
+  }
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0708"
+  },
+  "plate": "345GHS",
+  "type_vehicle": "vagoneta",
+  "image": "imagen.jpg",
+  "speed": 75,
+  "vehicle_ruat": {
+    "$oid": "66513890f1ceb26f247a0724"
+  }
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0709"
+  },
+  "plate": "345GHS",
+  "type_vehicle": "vagoneta",
+  "image": "imagen.jpg",
+  "speed": 90,
+  "vehicle_ruat": {
+    "$oid": "66513890f1ceb26f247a0724"
+  }
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a070a"
+  },
+  "plate": "345GHS",
+  "type_vehicle": "vagoneta",
+  "image": "imagen.jpg",
+  "speed": 80,
+  "vehicle_ruat": {
+    "$oid": "66513890f1ceb26f247a0725"
+  }
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a070b"
+  },
+  "plate": "678JKL",
+  "type_vehicle": "sedán",
+  "image": "carro.jpg",
+  "speed": 85,
+  "vehicle_ruat": {
+    "$oid": "66513890f1ceb26f247a0725"
+  }
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a070c"
+  },
+  "plate": "678JKL",
+  "type_vehicle": "sedán",
+  "image": "carro.jpg",
+  "speed": 65,
+  "vehicle_ruat": {
+    "$oid": "66513890f1ceb26f247a0726"
+  }
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a070d"
+  },
+  "plate": "901MNO",
+  "type_vehicle": "camioneta",
+  "image": "auto.jpg",
+  "speed": 95,
+  "vehicle_ruat": {
+    "$oid": "66513890f1ceb26f247a0726"
+  }
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a070e"
+  },
+  "plate": "901MNO",
+  "type_vehicle": "camioneta",
+  "image": "auto.jpg",
+  "speed": 70,
+  "vehicle_ruat": {
+    "$oid": "66513890f1ceb26f247a0734"
+  }
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a070f"
+  },
+  "plate": "234PQR",
+  "type_vehicle": "coupé",
+  "image": "coche.jpg",
+  "speed": 80,
+  "vehicle_ruat": "DED78"
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0710"
+  },
+  "plate": "234PQR",
+  "type_vehicle": "coupé",
+  "image": "coche.jpg",
+  "speed": 100,
+  "vehicle_ruat": {
+    "$oid": "66513890f1ceb26f247a0734"
+  }
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0711"
+  },
+  "plate": "567STU",
+  "type_vehicle": "hatchback",
+  "image": "vehiculo.jpg",
+  "speed": 85,
+  "vehicle_ruat": "EFE90"
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0712"
+  },
+  "plate": "567STU",
+  "type_vehicle": "hatchback",
+  "image": "vehiculo.jpg",
+  "speed": 75,
+  "vehicle_ruat": "EFE90"
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0713"
+  },
+  "plate": "890VWX",
+  "type_vehicle": "pickup",
+  "image": "car.jpg",
+  "speed": 90,
+  "vehicle_ruat": "FGH12"
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0714"
+  },
+  "plate": "890VWX",
+  "type_vehicle": "pickup",
+  "image": "car.jpg",
+  "speed": 60,
+  "vehicle_ruat": "FGH12"
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0715"
+  },
+  "plate": "123YZA",
+  "type_vehicle": "convertible",
+  "image": "imagen.jpg",
+  "speed": 110,
+  "vehicle_ruat": "IJK34"
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0716"
+  },
+  "plate": "123YZA",
+  "type_vehicle": "convertible",
+  "image": "imagen.jpg",
+  "speed": 95,
+  "vehicle_ruat": "IJK34"
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0717"
+  },
+  "plate": "456BCD",
+  "type_vehicle": "sedán",
+  "image": "carro.jpg",
+  "speed": 70,
+  "vehicle_ruat": "LMN56"
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0718"
+  },
+  "plate": "456BCD",
+  "type_vehicle": "sedán",
+  "image": "carro.jpg",
+  "speed": 80,
+  "vehicle_ruat": "LMN56"
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a0719"
+  },
+  "plate": "789EFG",
+  "type_vehicle": "camioneta",
+  "image": "auto.jpg",
+  "speed": 100,
+  "vehicle_ruat": "OPQ78"
+},
+{
+  "_id": {
+    "$oid": "66513785f1ceb26f247a071a"
+  },
+  "plate": "789EFG",
+  "type_vehicle": "camioneta",
+  "image": "auto.jpg",
+  "speed": 85,
+  "vehicle_ruat": "OPQ78"
+},
+{
+  "_id": {
+    "$oid": "66513b69a1fbaa60778bacc7"
+  },
+  "plate": "459GSD",
+  "type_vehicle": "vagoneta",
+  "image": "car.jpg",
+  "speed": 60,
+  "vehicle_ruat": {
+    "$oid": "66496ca5c0a0fbbe9eadcc5e"
+  },
+  "date": {
+    "$date": "2024-05-25T01:14:17.191Z"
+  },
+  "__v": 0
+}]

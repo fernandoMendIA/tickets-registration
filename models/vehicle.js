@@ -11,10 +11,6 @@ mongoose.connect(MONGO_URI)
 // Definición del esquema de vehicles
 const vehicleSchema = new mongoose.Schema({
   ouner: String,
-  date: {
-    type: Date,
-    default: Date.now
-  },
   plate: {type:String, require:true, unique:true},
   type_vehicle: String,
   image: String,
@@ -36,7 +32,7 @@ export class Vehicle {
         const filteredVehicles = await VehicleModel.find(filters);
         return filteredVehicles;
     } catch (error) {
-        throw new Error('Error al recuperar los datos o filtrarlos', error);
+       console.log('Error al recuperar los datos o filtrarlos', error);
     }
   }
 

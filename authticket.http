@@ -13,7 +13,7 @@ POST http://localhost:8000/auth/iniciarsesion
 Content-Type: application/json
 
 {
-  "correo" : "fergmail.com",
+  "correo" : "fer@gmail.com",
   "contrasenia" : "123456"
 }
 
@@ -28,7 +28,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2NjQ5NmI1NDFkNDJkODkzZWU1ZDE5M2MiLCJpYXQiOjE3MTYwOTk2NzMsImV4cCI6MTcxNjExMDQ3M30.2LgNakeJvyihhvaFvcm4Dd9qFrEG6EtNwxslfF8FpqE
 
 {
-  "plate": "888aaa",
+  "plate": "459GSD",
   "type_vehicle": "vagoneta",
   "image": "car.jpg",
   "speed": 60,

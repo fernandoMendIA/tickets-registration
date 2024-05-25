@@ -19,18 +19,19 @@ Content-Type: application/json
 }
 
 ### endpoint 3. Editar un vehiculo_ruat
-PUT  http://localhost:8000/vehicles/66496ca5c0a0fbbe9eadcc5e
+PUT  http://localhost:8000/vehicles/6649baf4e1baaf5ea5274180
 Content-Type: application/json
 
 {
-  "color": "avenger"
+
+  "color": "avengersssss"
 }
 
 ### endpoint 4. eliminar una multa (corrupci[on?])
 DELETE http://localhost:8000/vehicles/66496ca5c0a0fbbe9eadcc5e
 
 ### reporte 1
-GET http://localhost:8000/vehicles/multasporvehiculo/66497407366789313c8cc0d5
+GET http://localhost:8000/vehicles/multasporvehiculo/6649baf4e1baaf5ea527419e
 
 
 

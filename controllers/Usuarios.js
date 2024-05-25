@@ -16,8 +16,15 @@ export class usuarioController {
   }
 
   static async iniciarSesion (req, res) {
+    console.log('mifuncion')
     try {
-      const { correo, contrasenia } = req.body;
+      const { email, password } = req.body.data.attributes;
+
+      const correo = email
+      const contrasenia = password
+      console.log(correo, contrasenia)
+      // console.log(req.headers)
+
       const usuario = await Usuario.findByEmail({ correo });
       if (!usuario)
           return res.status(401).json({ error : 'Correo inválido' });
@@ -32,43 +39,51 @@ export class usuarioController {
       await saveToken.save();
       
       // Configuración de cookie
-      res.cookie('token', token, {
-          httpOnly: true, // Elimina el acceso desde JavaScript
-          // secure: process.env.NODE_ENV === 'production', // Solo HTTPS en producción
-          sameSite: 'strict', // Ayuda a prevenir ataques CSRF
-          maxAge: 3 * 60 * 60 * 1000 // 3 horas en milisegundos
+      // res.cookie('token', token, {
+      //     httpOnly: true, // Elimina el acceso desde JavaScript
+      //     // secure: process.env.NODE_ENV === 'production', // Solo HTTPS en producción
+      //     sameSite: 'strict', // Ayuda a prevenir ataques CSRF
+      //     maxAge: 3 * 60 * 60 * 1000 // 3 horas en milisegundos
+      // });
+
+      // res.json({ token });
+      return res.json({
+        token_type: "Bearer",
+        expires_in: "24h",
+        access_token: token,
+        refresh_token: token,
       });
 
-      res.json({ token });
+
     } catch(error) {
-        res.status(500).json({ mensaje: error.message });
+        res.status(500).json({ message: 'Verifique los datos' });
     }
   };
 
   static async cerrarSesion (req, res) {
     try {
-      const token = req.headers.authorization?.split(' ')[1];
+      // const token = req.headers.authorization?.split(' ')[1];
       // console.log(token)
-      if (!token) {
-          return res.status(401).json({ mensaje: 'No hay token de autenticación' });
-      }
+      // if (!token) {
+      //     return res.status(401).json({ mensaje: 'No hay token de autenticación' });
+      // }
 
       // Marcar el token como inactivo en la base de datos
-      const banedtoken = await BannedToken.findOneAndUpdate({ token: token }, { activo: false }, {new:true});
+      // const banedtoken = await BannedToken.findOneAndUpdate({ token: token }, { activo: false }, {new:true});
       // console.log(banedtoken)
 
       // Crear un token inválido sin firma
-      const invalidToken = jwt.sign({ usuarioId: null }, 'clave_invalida', { expiresIn: '1ms' });
+      // const invalidToken = jwt.sign({ usuarioId: null }, 'clave_invalida', { expiresIn: '1ms' });
 
       // Set cookie con token inválido
-      res.cookie('token', invalidToken, {
-          httpOnly: true,
-          // secure: process.env.NODE_ENV === 'production', // Solo HTTPS en producción
-          sameSite: 'strict',
-          maxAge: 1 // Invalida la cookie inmediatamente
-      });
+      // res.cookie('token', invalidToken, {
+      //     httpOnly: true,
+      //     // secure: process.env.NODE_ENV === 'production', // Solo HTTPS en producción
+      //     sameSite: 'strict',
+      //     maxAge: 1 // Invalida la cookie inmediatamente
+      // });
 
-      res.json({ mensaje: 'Sesión cerrada correctamente', newTokenInvalid: invalidToken });
+      res.json({ mensaje: 'Sesión cerrada correctamente' });
   }
   catch (error) {
       res.status(500).json({ mensaje: error.message });

@@ -19,10 +19,15 @@ export class VehicleController {
   }
 
   static async create (req, res) {
+
     const result = req.body
+    if (result._id === "") {
+      delete result._id;
+    }
+    console.log(result.date)
     const newVehicle = await Vehicle.create(result)
     if (!newVehicle) {
-      return res.status(400).json({ error: JSON.parse(result.error.message) })
+      return res.status(400).json({ message: "error en el servidor" })
     }else{
       res.status(201).json(newVehicle)
     }
@@ -31,6 +36,8 @@ export class VehicleController {
   static async update (req, res) {
     const { id } = req.params
     const { body }= req
+    console.log('crear este vehiculo')
+    console.log(id,body)
     const updatedVehicle = await Vehicle.update(id, body)
 
     if (!updatedVehicle) {
@@ -42,7 +49,7 @@ export class VehicleController {
 
   static async delete (req, res) {
     const { id } = req.params
-
+    console.log(id)
     const result = await Vehicle.delete(id)
 
     if (!result) {
